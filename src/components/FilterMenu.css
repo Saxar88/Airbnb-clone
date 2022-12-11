@@ -1,0 +1,7 @@
+.filters--list {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 5rem;
+}
