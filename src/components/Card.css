@@ -1,0 +1,47 @@
+.card {
+	width: min-content;
+}
+
+.card > img {
+	object-fit: cover;
+	width: 300px;
+	height: 300px;
+	border-radius: 15px;
+}
+
+.card--info {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card--infoData {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	color: #717171;
+}
+
+.card--infoTitle,
+.card--infoPrice {
+	color: #000;
+	font-weight: 600;
+}
+
+.card--infoData > p {
+	margin: 1px 0;
+}
+
+.card--rating {
+	display: flex;
+	align-items: start;
+	justify-content: start;
+	gap: 3px;
+}
+
+.card--rating > p {
+	margin: 1px 0;
+}
+
+.card--ratingStar {
+	margin-top: 5px;
+}
