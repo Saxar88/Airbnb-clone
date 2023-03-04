@@ -29,6 +29,16 @@ const locations = [
 		rating: "5.0",
 	},
 	{
+		id: 10291284,
+		type: "castle",
+		image:
+			"https://a0.muscache.com/im/pictures/1a42c880-122f-4ebe-a3d9-e08b6b9cf2b2.jpg",
+		title: "Saint-Sulpice-d'Excideuil, France",
+		description: "Built in the 19th century",
+		price: "2,692 lei",
+		rating: "5",
+	},
+	{
 		id: 17473199,
 		type: "castle",
 		image:
@@ -43,7 +53,7 @@ const locations = [
 		type: "castle",
 		image:
 			"https://a0.muscache.com/im/pictures/02b1550f-730c-47e2-afda-8ef7dac13e09.jpg",
-		title: "Beaumesnil, Normandie, France",
+		title: "Beaumesnil, France",
 		description: "Built in the 17th century",
 		price: "1,393 lei",
 		rating: "4.74",

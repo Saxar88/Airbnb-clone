@@ -1,17 +1,11 @@
 import React, {useState, useRef} from "react";
 import "./SearchNavbar.css";
 import logo from "../assets/logo.png";
-import {AiOutlineMinus, AiOutlinePlus} from "react-icons/ai";
+import {CiCircleMinus, CiCirclePlus} from "react-icons/ci";
 import {BiGlobe} from "react-icons/bi";
 import {FaSearch, FaUserCircle} from "react-icons/fa";
 import {GiHamburgerMenu} from "react-icons/gi";
 import {useOnClickOutside} from "../hooks/useOnClickOutside";
-import flexible from "../assets/flexible.jpg";
-import middleEast from "../assets/middle-east.webp";
-import italy from "../assets/italy.webp";
-import seAsia from "../assets/se-asia.webp";
-import hungary from "../assets/hungary.webp";
-import usa from "../assets/usa.webp";
 import DatePicker from "./DatePicker";
 
 function SearchNavbar() {
@@ -123,7 +117,7 @@ function SearchNavbar() {
 					<div className="where--menuRegions">
 						<div>
 							<img
-								src={flexible}
+								src={require("../assets/flexible.jpg")}
 								alt="anywhere"
 								className="where--menuRegion"
 							/>
@@ -131,31 +125,39 @@ function SearchNavbar() {
 						</div>
 						<div>
 							<img
-								src={middleEast}
+								src={require("../assets/middle-east.webp")}
 								alt="Middle East"
 								className="where--menuRegion"
 							/>
 							<p>Middle East</p>
 						</div>
 						<div>
-							<img src={italy} alt="Italy" className="where--menuRegion" />
+							<img
+								src={require("../assets/italy.webp")}
+								alt="Italy"
+								className="where--menuRegion"
+							/>
 							<p>Italy</p>
 						</div>
 						<div>
 							<img
-								src={seAsia}
+								src={require("../assets/se-asia.webp")}
 								alt="Southeast Asia"
 								className="where--menuRegion"
 							/>
 							<p>Southeast Asia</p>
 						</div>
 						<div>
-							<img src={hungary} alt="Hungary" className="where--menuRegion" />
+							<img
+								src={require("../assets/hungary.webp")}
+								alt="Hungary"
+								className="where--menuRegion"
+							/>
 							<p>Hungary</p>
 						</div>
 						<div>
 							<img
-								src={usa}
+								src={require("../assets/usa.webp")}
 								alt="United States"
 								className="where--menuRegion"
 							/>
@@ -168,68 +170,52 @@ function SearchNavbar() {
 				<DatePicker />
 			)}
 			{isWhoMenuDropDownOpen && (
-				<div className="who-menu">
-					<div className="who-menuOptions">
+				<div className="who--menu">
+					<div className="who--menuOptions">
 						<div>
-							<p className="who-menuOptionsBold">Adults</p>
+							<p className="who--menuOptionsBold">Adults</p>
 							<p className="smallText">Ages 13 or above</p>
 						</div>
-						<div className="who-menuCounter">
-							<button>
-								<AiOutlineMinus />
-							</button>
+						<div className="who--menuCounter">
+							<CiCircleMinus className="who--menuCounterButton" />
 							<p>0</p>
-							<button>
-								<AiOutlinePlus />
-							</button>
+							<CiCirclePlus className="who--menuCounterButton" />
 						</div>
 					</div>
 					<hr />
-					<div className="who-menuOptions">
+					<div className="who--menuOptions">
 						<div>
-							<p className="who-menuOptionsBold">Children</p>
+							<p className="who--menuOptionsBold">Children</p>
 							<p className="smallText">Ages 2-12</p>
 						</div>
-						<div className="who-menuCounter">
-							<button>
-								<AiOutlineMinus />
-							</button>
+						<div className="who--menuCounter">
+							<CiCircleMinus className="who--menuCounterButton" />
 							<p>0</p>
-							<button>
-								<AiOutlinePlus />
-							</button>
+							<CiCirclePlus className="who--menuCounterButton" />
 						</div>
 					</div>
 					<hr />
-					<div className="who-menuOptions">
+					<div className="who--menuOptions">
 						<div>
-							<p className="who-menuOptionsBold">Infants</p>
+							<p className="who--menuOptionsBold">Infants</p>
 							<p className="smallText">Under 2</p>
 						</div>
-						<div className="who-menuCounter">
-							<button>
-								<AiOutlineMinus />
-							</button>
+						<div className="who--menuCounter">
+							<CiCircleMinus className="who--menuCounterButton" />
 							<p>0</p>
-							<button>
-								<AiOutlinePlus />
-							</button>
+							<CiCirclePlus className="who--menuCounterButton" />
 						</div>
 					</div>
 					<hr />
-					<div className="who-menuOptions">
+					<div className="who--menuOptions">
 						<div>
-							<p className="who-menuOptionsBold">Pets</p>
+							<p className="who--menuOptionsBold">Pets</p>
 							<p className="smallText">Bringing a service animal?</p>
 						</div>
-						<div className="who-menuCounter">
-							<button>
-								<AiOutlineMinus />
-							</button>
+						<div className="who--menuCounter">
+							<CiCircleMinus className="who--menuCounterButton" />
 							<p>0</p>
-							<button>
-								<AiOutlinePlus />
-							</button>
+							<CiCirclePlus className="who--menuCounterButton" />
 						</div>
 					</div>
 				</div>

@@ -10,6 +10,7 @@ function Filters() {
 		{label: "Farms", icon: require("../assets/farms.jpg")},
 		{label: "Arctic", icon: require("../assets/arctic.jpg")},
 		{label: "Cabins", icon: require("../assets/cabins.jpg")},
+		{label: "Beachfront", icon: require("../assets/beachfront.jpg")},
 		{label: "A-frames", icon: require("../assets/a-frames.jpg")},
 		{label: "Ski-in/out", icon: require("../assets/ski.jpg")},
 		{label: "Luxe", icon: require("../assets/luxe.jpg")},
@@ -20,9 +21,14 @@ function Filters() {
 			label: "Historical homes",
 			icon: require("../assets/historical-homes.jpg"),
 		},
+		{label: "Windmills", icon: require("../assets/windmills.jpg")},
+		{label: "Mansions", icon: require("../assets/mansions.jpg")},
+		{label: "Islands", icon: require("../assets/islands.jpg")},
+		{label: "Towers", icon: require("../assets/towers.jpg")},
+		{label: "Caves", icon: require("../assets/caves.jpg")},
 	];
 
-	const [activeFilter, setActiveFilter] = useState(1);
+	const [activeFilter, setActiveFilter] = useState(0);
 
 	return (
 		<div className="filters">

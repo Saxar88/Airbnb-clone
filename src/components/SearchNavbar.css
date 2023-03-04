@@ -211,7 +211,7 @@
 	margin: 0;
 }
 
-.who-menu {
+.who--menu {
 	display: flex;
 	flex-direction: column;
 	position: absolute;
@@ -223,7 +223,7 @@
 	border-radius: 25px;
 }
 
-.who-menuOptions {
+.who--menuOptions {
 	display: flex;
 	text-align: start;
 	justify-content: space-between;
@@ -231,29 +231,28 @@
 	gap: 5rem;
 }
 
-.who-menuOptionsBold {
+.who--menuOptionsBold {
 	color: #222;
 	font-size: 0.875rem;
 	font-weight: 700;
 	margin: 4px 0;
 }
 
-.who-menuCounter {
+.who--menuCounter {
 	display: flex;
 	height: 32px;
 	align-items: center;
 	gap: 1rem;
 }
 
-.who-menuCounter > button {
-	background-color: #fff;
-	padding: 0.45rem 0.5rem;
-	border: 1px solid #b1b1b1;
-	border-radius: 9999px;
+.who--menuCounterButton {
+	height: 2rem;
+	width: 2rem;
+	color: #b1b1b1;
 	cursor: pointer;
 }
 
-.who-menu > hr {
+.who--menu > hr {
 	height: 1px;
 	width: 90%;
 	border: none;
