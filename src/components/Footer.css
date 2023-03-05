@@ -1,0 +1,57 @@
+.footer {
+	position: sticky;
+	bottom: 0;
+	display: flex;
+	justify-content: space-between;
+	height: 3rem;
+	background-color: #fff;
+	color: #222;
+	padding: 0 5rem;
+	border-top: 1px solid #ebebeb;
+	z-index: 1;
+}
+
+.footer--left {
+	display: flex;
+	gap: 10px;
+	font-size: 0.875rem;
+}
+
+.footer--right {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.footer--language {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	cursor: pointer;
+}
+
+.footer--globeIcon {
+	height: 1rem;
+	width: 1rem;
+}
+
+.footer--support {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	cursor: pointer;
+}
+
+.footer-caretIcon {
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+.footer-link {
+	cursor: pointer;
+}
+
+.footer-link:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
