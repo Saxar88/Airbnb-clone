@@ -1,9 +1,18 @@
+.filters {
+	position: sticky;
+	top: 65px;
+	display: flex;
+	align-items: center;
+	background-color: #fff;
+	padding: 1rem 5rem;
+}
+
 .filters--list {
-	height: 5rem;
+	height: 4.5rem;
+	width: 95%;
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-	margin: 1rem 2rem;
 	overflow-x: auto;
 }
 
@@ -12,6 +21,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	white-space: nowrap;
 	font-size: 0.75rem;
 	opacity: 0.5;
 	margin: 12px 0 10px;
@@ -41,4 +51,19 @@
 .filter--image {
 	height: 1.5rem;
 	width: 1.5rem;
+}
+
+.filters--button {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	height: 48px;
+	padding: 0 15px;
+	border: 1px solid #efefef;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.filters--button > p {
+	margin: 0;
 }

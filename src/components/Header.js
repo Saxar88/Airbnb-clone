@@ -1,7 +1,6 @@
 import React, {useState, useRef} from "react";
 import "./Header.css";
 import {useOnClickOutside} from "../hooks/useOnClickOutside";
-import logo from "../assets/logo.png";
 import {BiGlobe} from "react-icons/bi";
 import {FaSearch} from "react-icons/fa";
 import {FaUserCircle} from "react-icons/fa";
@@ -12,19 +11,28 @@ import FilterMenu from "./FilterMenu";
 function Header() {
 	const searchRef = useRef(null);
 	const [showSearch, setShowSearch] = useState(false);
-
 	const closeSearch = () => {
 		setShowSearch(false);
 	};
-
 	useOnClickOutside(searchRef, closeSearch);
+
+	const userDropdownRef = useRef(null);
+	const [isUserMenuDropDownOpen, setUserMenuDropDownOpen] = useState(false);
+	const closeUserMenu = () => {
+		setUserMenuDropDownOpen(false);
+	};
+	useOnClickOutside(userDropdownRef, closeUserMenu);
 
 	return (
 		<>
-			{!showSearch && (
+			{showSearch === false && (
 				<>
 					<div className="header" ref={searchRef}>
-						<img className="header--logo" src={logo} alt="logo" />
+						<img
+							className="header--logo"
+							src={require("../assets/logo.png")}
+							alt="logo"
+						/>
 						<div className="header--middle">
 							<div
 								className="header--middleButtons"
@@ -37,14 +45,30 @@ function Header() {
 								<FaSearch className="header--middleSearchIcon" />
 							</div>
 						</div>
-
 						<div className="header--right">
-							<p>Airbnb your home</p>
-							<BiGlobe className="header--globeIcon" />
-							<div className="header--userMenu">
-								<GiHamburgerMenu />
-								<FaUserCircle className="header--userIcon" />
+							<div className="header--rightMenu">
+								<p className="header--rightMenuOption">Airbnb your home</p>
+								<BiGlobe className="header--globeIcon" />
+								<div
+									className="header--userMenuIcons"
+									ref={userDropdownRef}
+									onClick={() => {
+										setUserMenuDropDownOpen(true);
+									}}>
+									<GiHamburgerMenu />
+									<FaUserCircle className="header--userIcon" />
+								</div>
 							</div>
+							{isUserMenuDropDownOpen && (
+								<div className="header--userMenu">
+									<p className="header--userMenuSignUp">Sign up</p>
+									<p>Log in</p>
+									<hr />
+									<p>Airbnb your home</p>
+									<p>Host an experience</p>
+									<p>Help</p>
+								</div>
+							)}
 						</div>
 					</div>
 					<FilterMenu />

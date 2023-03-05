@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import "./FilterMenu.css";
+import {BsSliders} from "react-icons/bs";
 
 function Filters() {
 	const sorting = [
@@ -42,6 +43,10 @@ function Filters() {
 						{item.label}
 					</div>
 				))}
+			</div>
+			<div className="filters--button">
+				<BsSliders />
+				<p>Filters</p>
 			</div>
 		</div>
 	);

@@ -1,5 +1,8 @@
 .header {
+	position: sticky;
+	top: 0;
 	height: 80px;
+	background-color: #fff;
 	color: #222;
 	font-size: 0.875rem;
 	font-weight: 600;
@@ -8,12 +11,20 @@
 	justify-content: space-between;
 	padding: 0 5rem;
 	border-bottom: 1px solid #ebebeb;
+	z-index: 1;
 }
 
 .header--logo {
-	object-fit: contain;
-	width: 120px;
-	cursor: pointer;
+	display: none;
+}
+
+@media (min-width: 768px) {
+	.header--logo {
+		display: inline-flex;
+		object-fit: contain;
+		width: 120px;
+		cursor: pointer;
+	}
 }
 
 .header--middle {
@@ -83,9 +94,16 @@
 }
 
 .header--right {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
+	display: none;
+}
+
+@media (min-width: 768px) {
+	.header--right {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		white-space: nowrap;
+	}
 }
 
 .header--right > p {
@@ -106,26 +124,53 @@
 	cursor: pointer;
 }
 
+.header--rightMenuOption:hover,
 .header--globeIcon:hover {
 	background-color: #f7f7f7;
 }
 
 .header--userMenu {
+	position: absolute;
+	top: 70px;
+	right: 0px;
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	color: #717171;
-	margin-left: 5px;
-	gap: 0.75rem;
-	padding: 0.375rem 0.375rem 0.375rem 0.75rem;
-	border: 1px solid #ddd;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 200px;
+	background-color: #fff;
+	color: #222;
+	padding: 5px 15px;
+	border: 1px solid #efefef;
+	border-radius: 10px;
+	z-index: 1;
+}
+
+.header--rightMenuOption {
+	margin: 0;
+	padding: 0.75rem;
 	border-radius: 9999px;
 	cursor: pointer;
 }
 
-.header--userMenu:hover {
+.header--userMenuSignUp {
+	font-weight: 600;
+}
+
+.header--userMenu > hr {
+	height: 1px;
+	width: 100%;
+	border: none;
+	background-color: #ebebeb;
+}
+
+.header--userMenuIcons {
+	margin-left: 5px;
+}
+
+.header--userMenuIcons:hover {
 	box-shadow: 0 6px 8px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 	--tw-shadow-color: #9ca3af;
+	transition: 0.2s;
 }
 
 .header--userIcon {

@@ -68,6 +68,16 @@ const locations = [
 		price: "93,511 lei",
 	},
 	{
+		id: 20813401,
+		type: "castle",
+		image:
+			"https://a0.muscache.com/im/pictures/6de1c566-3de7-4a70-8a86-8170e2a60871.jpg",
+		title: "Champtocé-sur-Loire, France",
+		description: "Built in the 14th century",
+		price: "3,692 lei",
+		rating: "5",
+	},
+	{
 		id: 23678762,
 		type: "castle",
 		image:
@@ -105,6 +115,15 @@ const locations = [
 		description: "Built in the 14th century",
 		price: "1,203 lei",
 		rating: "4.9",
+	},
+	{
+		id: 618759747225513059,
+		type: "mansion",
+		image:
+			"https://a0.muscache.com/im/pictures/miso/Hosting-618759747225513059/original/89cc213a-8377-42cb-8d9c-adf4491de22d.jpeg",
+		title: "Lovran, Croatia",
+		price: "5,123 lei",
+		rating: "5",
 	},
 ];
 

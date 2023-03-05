@@ -36,6 +36,14 @@
 @media (min-width: 1536px) {
 	.home--section {
 		display: grid;
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+		padding: 30px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.home--section {
+		display: grid;
 		grid-template-columns: repeat(6, minmax(0, 1fr));
 		padding: 30px;
 	}
