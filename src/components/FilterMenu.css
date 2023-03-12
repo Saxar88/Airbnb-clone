@@ -1,69 +1,69 @@
 .filters {
-	position: sticky;
-	top: 65px;
-	display: flex;
-	align-items: center;
-	background-color: #fff;
-	padding: 1rem 5rem;
+  position: sticky;
+  top: 65px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem 5rem;
 }
 
 .filters--list {
-	height: 4.5rem;
-	width: 95%;
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	overflow-x: auto;
+  height: 4.5rem;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
 }
 
 .filter {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	white-space: nowrap;
-	font-size: 0.75rem;
-	opacity: 0.5;
-	margin: 12px 0 10px;
-	padding: 4px 0;
-	border-bottom: 2px solid transparent;
-	cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  opacity: 0.5;
+  margin: 12px 0 10px;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
 }
 
 .filter:hover {
-	border-bottom: 2px solid #ddd;
-	opacity: 1;
-	transition: 0.1s;
+  border-bottom: 2px solid #ddd;
+  opacity: 1;
+  transition: 0.1s;
 }
 
 .filter--focus {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-size: 0.75rem;
-	padding: 0.75rem 0;
-	color: #000;
-	border-bottom: 2px solid #000;
-	transition: 0.1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  padding: 0.75rem 0;
+  color: #000;
+  border-bottom: 2px solid #000;
+  transition: 0.1s;
 }
 
 .filter--image {
-	height: 1.5rem;
-	width: 1.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .filters--button {
-	display: flex;
-	align-items: center;
-	gap: 5px;
-	height: 48px;
-	padding: 0 15px;
-	border: 1px solid #efefef;
-	border-radius: 10px;
-	cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 48px;
+  padding: 0 15px;
+  border: 1px solid #efefef;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .filters--button > p {
-	margin: 0;
+  margin: 0;
 }
