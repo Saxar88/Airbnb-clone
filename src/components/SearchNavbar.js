@@ -1,13 +1,11 @@
 import React, { useState, useRef } from "react";
 import "./SearchNavbar.css";
 import { CiCircleMinus, CiCirclePlus } from "react-icons/ci";
-import { BiGlobe } from "react-icons/bi";
-import { FaSearch, FaUserCircle } from "react-icons/fa";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { FaSearch } from "react-icons/fa";
 import { useOnClickOutside } from "../hooks/useOnClickOutside";
 import DatePicker from "./DatePicker";
 
-function SearchNavbar() {
+function SearchNavbar(closeUserMenu) {
 	const [activeStays, setActiveStays] = useState(false);
 	const activateStays = () => {
 		setActiveStays(true);
@@ -101,13 +99,6 @@ function SearchNavbar() {
 
 	const guestNumber = adultCounter + childCounter + infantCounter;
 
-	const userDropdownRef = useRef(null);
-	const [isUserMenuDropDownOpen, setUserMenuDropDownOpen] = useState(false);
-	const closeUserMenu = () => {
-		setUserMenuDropDownOpen(false);
-	};
-	useOnClickOutside(userDropdownRef, closeUserMenu);
-
 	return (
 		<>
 			<div className="navbar--header">
@@ -144,7 +135,7 @@ function SearchNavbar() {
 				</div>
 				<div className="header--bottom">
 					<button
-						className="headerBottom--button headerBottom--firstButton"
+						className="headerBottom--button"
 						ref={whereDropdownRef}
 						onClick={() => {
 							setWhereMenuDropDownOpen(true);
@@ -181,7 +172,7 @@ function SearchNavbar() {
 						<p className="smallText">Add dates</p>
 					</button>
 					<button
-						className="headerBottom--button headerBottom--lastButton"
+						className="headerBottom--button"
 						onClick={() => {
 							closeWhereMenu();
 							closeCheckInMenu();
