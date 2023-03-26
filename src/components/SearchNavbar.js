@@ -191,160 +191,161 @@ function SearchNavbar(closeUserMenu) {
 							</p>
 						</div>
 						<div className="headerBottom--searchBtn">
-							<FaSearch className="header--middleSearchIcon" /> Search
+							<FaSearch className="headerBottom--searchIcon" />
+							<p>Search</p>
 						</div>
 					</button>
+					{isWhereMenuDropDownOpen && (
+						<div className="where--menu">
+							<p className="boldText">Search by region</p>
+							<div className="where--menuRegions">
+								<div>
+									<img
+										src={require("../assets/flexible.jpg")}
+										alt="anywhere"
+										className="where--menuRegion"
+									/>
+									<p>I'm flexible</p>
+								</div>
+								<div>
+									<img
+										src={require("../assets/middle-east.webp")}
+										alt="Middle East"
+										className="where--menuRegion"
+									/>
+									<p>Middle East</p>
+								</div>
+								<div>
+									<img
+										src={require("../assets/italy.webp")}
+										alt="Italy"
+										className="where--menuRegion"
+									/>
+									<p>Italy</p>
+								</div>
+								<div>
+									<img
+										src={require("../assets/se-asia.webp")}
+										alt="Southeast Asia"
+										className="where--menuRegion"
+									/>
+									<p>Southeast Asia</p>
+								</div>
+								<div>
+									<img
+										src={require("../assets/hungary.webp")}
+										alt="Hungary"
+										className="where--menuRegion"
+									/>
+									<p>Hungary</p>
+								</div>
+								<div>
+									<img
+										src={require("../assets/usa.webp")}
+										alt="United States"
+										className="where--menuRegion"
+									/>
+									<p>United States</p>
+								</div>
+							</div>
+						</div>
+					)}
+					{(isCheckInMenuDropDownOpen || isCheckOutMenuDropDownOpen) && (
+						<DatePicker />
+					)}
+					{isWhoMenuDropDownOpen && (
+						<div className="who--menu">
+							<div className="who--menuOptions">
+								<div>
+									<p className="who--menuOptionsBold">Adults</p>
+									<p className="smallText">Ages 13 or above</p>
+								</div>
+								<div className="who--menuCounter">
+									<CiCircleMinus
+										className={
+											adultCounter > 0
+												? "who--menuCounterButton"
+												: "who--menuCounterButtonDisabled"
+										}
+										onClick={decreaseAdultCount}
+									/>
+									<p>{adultCounter}</p>
+									<CiCirclePlus
+										className="who--menuCounterButton"
+										onClick={increaseAdultCount}
+									/>
+								</div>
+							</div>
+							<hr />
+							<div className="who--menuOptions">
+								<div>
+									<p className="who--menuOptionsBold">Children</p>
+									<p className="smallText">Ages 2-12</p>
+								</div>
+								<div className="who--menuCounter">
+									<CiCircleMinus
+										className={
+											childCounter > 0
+												? "who--menuCounterButton"
+												: "who--menuCounterButtonDisabled"
+										}
+										onClick={decreaseChildCount}
+									/>
+									<p>{childCounter}</p>
+									<CiCirclePlus
+										className="who--menuCounterButton"
+										onClick={increaseChildCount}
+									/>
+								</div>
+							</div>
+							<hr />
+							<div className="who--menuOptions">
+								<div>
+									<p className="who--menuOptionsBold">Infants</p>
+									<p className="smallText">Under 2</p>
+								</div>
+								<div className="who--menuCounter">
+									<CiCircleMinus
+										className={
+											infantCounter > 0
+												? "who--menuCounterButton"
+												: "who--menuCounterButtonDisabled"
+										}
+										onClick={decreaseInfantCount}
+									/>
+									<p>{infantCounter}</p>
+									<CiCirclePlus
+										className="who--menuCounterButton"
+										onClick={increaseInfantCount}
+									/>
+								</div>
+							</div>
+							<hr />
+							<div className="who--menuOptions">
+								<div>
+									<p className="who--menuOptionsBold">Pets</p>
+									<p className="smallText link">Bringing a service animal?</p>
+								</div>
+								<div className="who--menuCounter">
+									<CiCircleMinus
+										className={
+											petCounter > 0
+												? "who--menuCounterButton"
+												: "who--menuCounterButtonDisabled"
+										}
+										onClick={decreasePetCount}
+									/>
+									<p>{petCounter}</p>
+									<CiCirclePlus
+										className="who--menuCounterButton"
+										onClick={increasePetCount}
+									/>
+								</div>
+							</div>
+						</div>
+					)}
 				</div>
 			</div>
-			{isWhereMenuDropDownOpen && (
-				<div className="where--menu">
-					<p className="boldText">Search by region</p>
-					<div className="where--menuRegions">
-						<div>
-							<img
-								src={require("../assets/flexible.jpg")}
-								alt="anywhere"
-								className="where--menuRegion"
-							/>
-							<p>I'm flexible</p>
-						</div>
-						<div>
-							<img
-								src={require("../assets/middle-east.webp")}
-								alt="Middle East"
-								className="where--menuRegion"
-							/>
-							<p>Middle East</p>
-						</div>
-						<div>
-							<img
-								src={require("../assets/italy.webp")}
-								alt="Italy"
-								className="where--menuRegion"
-							/>
-							<p>Italy</p>
-						</div>
-						<div>
-							<img
-								src={require("../assets/se-asia.webp")}
-								alt="Southeast Asia"
-								className="where--menuRegion"
-							/>
-							<p>Southeast Asia</p>
-						</div>
-						<div>
-							<img
-								src={require("../assets/hungary.webp")}
-								alt="Hungary"
-								className="where--menuRegion"
-							/>
-							<p>Hungary</p>
-						</div>
-						<div>
-							<img
-								src={require("../assets/usa.webp")}
-								alt="United States"
-								className="where--menuRegion"
-							/>
-							<p>United States</p>
-						</div>
-					</div>
-				</div>
-			)}
-			{(isCheckInMenuDropDownOpen || isCheckOutMenuDropDownOpen) && (
-				<DatePicker />
-			)}
-			{isWhoMenuDropDownOpen && (
-				<div className="who--menu">
-					<div className="who--menuOptions">
-						<div>
-							<p className="who--menuOptionsBold">Adults</p>
-							<p className="smallText">Ages 13 or above</p>
-						</div>
-						<div className="who--menuCounter">
-							<CiCircleMinus
-								className={
-									adultCounter > 0
-										? "who--menuCounterButton"
-										: "who--menuCounterButtonDisabled"
-								}
-								onClick={decreaseAdultCount}
-							/>
-							<p>{adultCounter}</p>
-							<CiCirclePlus
-								className="who--menuCounterButton"
-								onClick={increaseAdultCount}
-							/>
-						</div>
-					</div>
-					<hr />
-					<div className="who--menuOptions">
-						<div>
-							<p className="who--menuOptionsBold">Children</p>
-							<p className="smallText">Ages 2-12</p>
-						</div>
-						<div className="who--menuCounter">
-							<CiCircleMinus
-								className={
-									childCounter > 0
-										? "who--menuCounterButton"
-										: "who--menuCounterButtonDisabled"
-								}
-								onClick={decreaseChildCount}
-							/>
-							<p>{childCounter}</p>
-							<CiCirclePlus
-								className="who--menuCounterButton"
-								onClick={increaseChildCount}
-							/>
-						</div>
-					</div>
-					<hr />
-					<div className="who--menuOptions">
-						<div>
-							<p className="who--menuOptionsBold">Infants</p>
-							<p className="smallText">Under 2</p>
-						</div>
-						<div className="who--menuCounter">
-							<CiCircleMinus
-								className={
-									infantCounter > 0
-										? "who--menuCounterButton"
-										: "who--menuCounterButtonDisabled"
-								}
-								onClick={decreaseInfantCount}
-							/>
-							<p>{infantCounter}</p>
-							<CiCirclePlus
-								className="who--menuCounterButton"
-								onClick={increaseInfantCount}
-							/>
-						</div>
-					</div>
-					<hr />
-					<div className="who--menuOptions">
-						<div>
-							<p className="who--menuOptionsBold">Pets</p>
-							<p className="smallText link">Bringing a service animal?</p>
-						</div>
-						<div className="who--menuCounter">
-							<CiCircleMinus
-								className={
-									petCounter > 0
-										? "who--menuCounterButton"
-										: "who--menuCounterButtonDisabled"
-								}
-								onClick={decreasePetCount}
-							/>
-							<p>{petCounter}</p>
-							<CiCirclePlus
-								className="who--menuCounterButton"
-								onClick={increasePetCount}
-							/>
-						</div>
-					</div>
-				</div>
-			)}
 		</>
 	);
 }
