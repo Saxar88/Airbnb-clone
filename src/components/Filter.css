@@ -1,0 +1,28 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  opacity: 0.5;
+  padding: 0.75rem 0;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+.filter:hover {
+  border-bottom: 2px solid #ddd;
+  opacity: 1;
+  transition: 0.1s;
+}
+
+.filter:focus {
+  color: #000;
+  border-bottom: 2px solid #000;
+  transition: 0.1s;
+}
+
+.filter > img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
